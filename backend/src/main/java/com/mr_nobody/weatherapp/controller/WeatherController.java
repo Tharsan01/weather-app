@@ -1,6 +1,5 @@
 package com.mr_nobody.weatherapp.controller;
 
-import com.mr_nobody.weatherapp.dto.CityData;
 import com.mr_nobody.weatherapp.dto.WeatherResponse;
 import com.mr_nobody.weatherapp.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WeatherController {
     @Autowired
     WeatherService weatherService;
-    @GetMapping("/api/weather")
+    @GetMapping("/weather")
     public ResponseEntity<WeatherResponse> getWeather(@RequestParam("cityCode") Long cityCode){
         try{
             WeatherResponse weatherResponse = weatherService.getWeatherForCity(cityCode);
