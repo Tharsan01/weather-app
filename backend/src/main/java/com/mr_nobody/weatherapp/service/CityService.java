@@ -2,20 +2,18 @@ package com.mr_nobody.weatherapp.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mr_nobody.weatherapp.dto.CityWeather;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mr_nobody.weatherapp.model.City;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
-@Service
+import java.util.Optional;
+
+
 public class CityService {
-    public List<CityWeather> loadCities;
-    @Autowired
-    ObjectMapper objectMapper;
-    public List<CityWeather> loadCities() throws IOException {
-        ClassPathResource resource = new ClassPathResource("data/cities.json");
-        return objectMapper.readValue(resource.getInputStream(), new TypeReference<List<CityWeather>>() {});
-    }
+
 }

@@ -1,7 +1,7 @@
 package com.mr_nobody.weatherapp.model.dto;
 
 import java.util.List;
-
+import com.mr_nobody.weatherapp.model.dto.Main;
 public class WeatherApiResponseDto {
 
     private String cityCode;
